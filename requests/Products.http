@@ -1,0 +1,12 @@
+### Get all products
+GET {{host}}/products
+
+### Create a product
+
+POST {{host}}/products
+Content-Type: application/json
+
+{
+    "name": "Lobster",
+    "price": 30
+}
