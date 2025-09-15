@@ -1,4 +1,4 @@
 {
   "schemaVersion": 2,
-  "dockerfilePath": "src/SignalR.Api/Dockerfile"
+  "dockerfilePath": "src/SignalR.Client/Dockerfile"
 }

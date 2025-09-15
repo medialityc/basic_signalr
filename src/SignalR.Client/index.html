@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-
-signalr/6.0.1/signalr.js"></script>
+    <script>
+      // Configura aquí la URL pública de la API en producción (opcionalmente sobreescrita por variable de entorno en build externo)
+      window.API_BASE_URL = window.API_BASE_URL || "http://localhost:8080"; // Cambia a https://signalr-api.tudominio.com al desplegar
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
     <script src="index.js" defer></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="main-page">
-        <button id="main-page-buy-button">buy</button>
-        <button id="main-page-subscribe-button">subscribe</button>
+      <button id="main-page-buy-button">buy</button>
+      <button id="main-page-subscribe-button">subscribe</button>
     </div>
 
     <div id="buy-page">
-        <button id="buy-page-back-button">back</button>
-        <p id="buy-page-subscription-id"></p>
+      <button id="buy-page-back-button">back</button>
+      <p id="buy-page-subscription-id"></p>
 
-        <ul id="buy-page-products-list">
-            <li>product 1</li>
-            <li>product 2</li>
-        </ul>
+      <ul id="buy-page-products-list">
+        <li>product 1</li>
+        <li>product 2</li>
+      </ul>
 
-        <ul id="buy-page-buy-list">
-            <li>product 1</li>
-            <li>product 2</li>
-        </ul>
+      <ul id="buy-page-buy-list">
+        <li>product 1</li>
+        <li>product 2</li>
+      </ul>
     </div>
 
     <div id="subscribe-page">
-        <button id="subscribe-page-back-button">back</button>
+      <button id="subscribe-page-back-button">back</button>
 
-        <div id="subscribe-page-subscription">
-            <p>enter subscription id</p>
-            <input type="text" id="subscribe-page-subscribe-input" placeholder="subscribe-id">
-            <button id="subscribe-page-subscribe-button">subscribe</button>
-        </div>
+      <div id="subscribe-page-subscription">
+        <p>enter subscription id</p>
+        <input
+          type="text"
+          id="subscribe-page-subscribe-input"
+          placeholder="subscribe-id"
+        />
+        <button id="subscribe-page-subscribe-button">subscribe</button>
+      </div>
 
-        <div id="subscribe-page-list">
-            <ul id="subscribe-page-products-list">
-
-            </ul>
-        </div>
+      <div id="subscribe-page-list">
+        <ul id="subscribe-page-products-list"></ul>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
